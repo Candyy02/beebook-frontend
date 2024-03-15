@@ -1,0 +1,14 @@
+.register input {
+  height: 5rem !important;
+  font-size: 2rem;
+  padding: 0 2rem;
+  border: 1px solid #000;
+  border-radius: 1rem;
+}
+.regis-span {
+  color: white;
+}
+h3 {
+  font-family: inherit !important;
+  font-size: 3rem !important;
+}
