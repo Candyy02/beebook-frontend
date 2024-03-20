@@ -1,28 +1,37 @@
-import React from 'react';
+import React from "react";
 // import Tippy from '@tippyjs/react/headless';
 
-import '../styles/Navbar.css';
-import  Search  from '../ui/Search';
+import "../styles/Navbar.css";
+import Search from "../ui/Search";
+import { useNavigate } from "react-router-dom";
+import HoverBookTypes from "./HoverBookTypes";
 
 const Navbar = () => {
-    return (
-        <div className="rectangle">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-4 d-flex align-items-center justify-content-between">
-                        <a href="/" className="logo">
-                            <img className="logo-image" alt="logo" src="/images/logo.png" />
-                        </a>
+  const navigate = useNavigate();
+  return (
+    <div className="rectangle">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-4 d-flex align-items-center justify-content-between">
+            <a onClick={() => navigate("/")} className="logo">
+              <img className="logo-image" alt="logo" src="/images/logo.png" />
+            </a>
 
-                        <h5 className="category">Thể loại</h5>
-                    </div>
-                    <div className="navbar-right col-lg-8 d-flex align-items-center justify-content-between">
-                        <Search />
-                        <div className='d-flex'>  
-                                <a href="login" className='custom-btn'>Đăng nhập</a>
-                                <a href="register" className='custom-btn'>Đăng ký</a>
-                        </div>
-                        {/*<Tippy
+            <h5 className="category">
+              <HoverBookTypes />
+            </h5>
+          </div>
+          <div className="navbar-right col-lg-8 d-flex align-items-center justify-content-between">
+            <Search />
+            <div className="d-flex">
+              <a className="custom-btn" onClick={() => navigate("/login")}>
+                Đăng nhập
+              </a>
+              <a className="custom-btn" onClick={() => navigate("/register")}>
+                Đăng ký
+              </a>
+            </div>
+            {/*<Tippy
                             interactive={true}
                             placement="bottom-end"
                             render={(attrs) => <div className="user-box" tabIndex="-1" {...attrs}>
@@ -72,11 +81,11 @@ const Navbar = () => {
                             </div>
                         </Tippy>
                         */}
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;

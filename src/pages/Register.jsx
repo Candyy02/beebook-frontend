@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/Register.css";
 function Register() {
+  const navigate = useNavigate();
   return (
     <div className="register">
       <div className="heading">
         <div className="regis-head">
           <div className="regis-wrapper">
-            <a href="/" className="logo">
+            <a onClick={() => navigate("/")} className="logo">
               <img className="logo-image" alt="logo" src="/images/logo.png" />
             </a>
           </div>

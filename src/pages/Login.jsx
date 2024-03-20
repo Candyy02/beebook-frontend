@@ -1,13 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 import Footer from "../ui/Footer";
 
 function Login() {
+  const navigate = useNavigate();
   return (
     <div className="register">
       <div className="heading">
         <div className="regis-head">
           <div className="regis-wrapper">
-            <a href="/" className="logo">
+            <a onClick={() => navigate("/")} className="logo">
               <img className="logo-image" alt="logo" src="/images/logo.png" />
             </a>
             <h3 className="regis-title">Đăng nhập</h3>
@@ -29,9 +31,6 @@ function Login() {
               Đăng ký
             </a>
           </div>
-
-          <div className="spacer"></div>
-
           <div className="form-group">
             <label htmlFor="email" className="form-label">
               Email

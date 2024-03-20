@@ -1,8 +1,15 @@
+.loading-ctn {
+  display: flex;
+  min-height: 60rem;
+  background-color: rgb(0, 0, 0, 0.5);
+  width: 100%;
+}
 .book-detail {
   color: #fff;
   flex-wrap: nowrap;
   height: fit-content;
   position: relative;
+  min-height: 60rem;
   &::before {
     content: "";
     position: absolute; /* Position the pseudo-element absolutely */

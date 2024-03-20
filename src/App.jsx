@@ -1,7 +1,7 @@
 import "./App.css";
 import "./styles/_flex.scss";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import EditProfile from "./pages/EditProfile";
 import ChangePassword from "./pages/ChangePassword";
@@ -19,8 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route path="" index element={<HomePage />} />
-
-          <Route path="bookdetail" element={<BookDetail />} />
+          <Route path="book/:bookId" element={<BookDetail />} />
           <Route path="editProfile" element={<EditProfile />} />
           <Route path="changePassword" element={<ChangePassword />} />
           <Route path="history" element={<PaymentHisPage />} />
