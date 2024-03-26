@@ -1,6 +1,6 @@
 .search-ctn {
   position: relative;
-
+  z-index: 100;
   input {
     width: 40rem;
     border-radius: 2rem;
@@ -16,16 +16,22 @@
     top: 120%;
     width: 100%;
     padding: 5rem;
-    background-color: #b1b1b1;
+    background-color: #5c5c5c;
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 2.5rem;
+    max-height: 30rem;
+    overflow-y: scroll;
     li {
-      padding: 1rem;
-      :hover {
-        background-color: #5e5e5e;
-      }
+      padding: 1rem 2rem;
+      transition: all 0.25s ease-in-out;
+    }
+    li:hover {
+      background-color: rgb(255, 187, 0);
+      cursor: pointer;
+      transform: translateY(-5px);
+      color: black;
     }
   }
 }

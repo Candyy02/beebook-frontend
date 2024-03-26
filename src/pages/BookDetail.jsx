@@ -4,6 +4,7 @@ import Button from "../ui/Button";
 import "./../styles/BookDetail.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import RateBook from "../ui/RateBook";
 function BookDetail() {
   const { bookId } = useParams();
   const [book, setBook] = useState({});
@@ -63,6 +64,7 @@ function BookDetail() {
                   ></path>
                 </svg>
                 <p>{book.totalPages} Trang</p>
+                <RateBook isReadOnly={true} rating={3.5} />
               </div>
 
               <p className="book-detail__buttons ">

@@ -1,3 +1,5 @@
+import Footer from "../ui/Footer";
+
 function UpdatePass() {
   return (
     <div className="register">
@@ -84,6 +86,7 @@ function UpdatePass() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
